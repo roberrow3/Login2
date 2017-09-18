@@ -61,10 +61,12 @@ public class SignUp extends AppCompatActivity implements View.OnClickListener {
             signUpUser(input_email.getText().toString(),input_pass.getText().toString());
 
         }
+        
 
     }
 
     private void signUpUser(String email, String password) {
+
         auth.createUserWithEmailAndPassword(email,password)
                 .addOnCompleteListener(this, new OnCompleteListener<AuthResult>() {
                     @Override
@@ -83,4 +85,5 @@ public class SignUp extends AppCompatActivity implements View.OnClickListener {
                     }
                 });
     }
+
 }
